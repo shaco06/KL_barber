@@ -14,7 +14,7 @@
 }
 body {
   margin: 0;
-  font-family: var(--ballo), Arial, sans-serif;
+  font-family: var(--fuente-principal), Arial, sans-serif;
   background-color: var(--fondo);
 }
 html {
@@ -25,10 +25,11 @@ header{
     top: 0;
     z-index: 1000;
 }
+/*header**************************************************************/
 .header_container{
     background-color: var(--fondo);
     padding: 0.5rem 0 0.5rem 0;
-    border: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
 }
 .header{
     display: flex;
@@ -38,8 +39,10 @@ header{
     margin-right: 20rem;
 }
 .header_logo{
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
+
 .header_logo img{
     display: block;
     width: 5rem;
@@ -55,9 +58,10 @@ header{
 .header_link{
     color: var(--tsecun);
     font-family: var(--fuente-principal);
-     font-size: 14px;
+    font-size: 14px;
     transition: color 0.3s ease;
     padding: 1rem;
+    text-decoration: none;
     cursor: pointer;
 }
 .header_link:hover{
@@ -73,10 +77,144 @@ header{
     text-align: center;
     border: none;
     border-radius: 0.5rem;
-    padding: 1px 25px 1px 25px;
+    padding: 0.5px 50px 0.5px 50px;
     transition: box-shadow 0.3s ease;
 }
 .header_boton:hover{
-    box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--secun) 20%, transparent);
+    box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--secun) 20%, transparent); /* sombreado con otro color*/
     transition: opacity 0.3s ease;
+}
+/*inicio**************************************************************/
+ .main_container{
+    background-image: url("/img/1.jpeg");
+    background-size: cover;       /* cubre toda la sección */
+    background-position: center;  /* centra la imagen */
+    background-repeat: no-repeat;
+    margin: 0%;
+    box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--secun) 50%, transparent);
+}
+.main{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+.main_sub{
+    color: var(--blanco);
+    font-family: var(--fuente-secundaria);
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 0%;
+}
+.destacado{
+    color: var(--blue);
+}
+.main_titulo{
+    font-size: 7rem;
+    font-weight: 800;
+    color: var(--tprin);
+    margin: 0%;
+}
+.main_subtitulo{
+    color: var(--tprin);
+}
+.main_par{
+    color: var(--tsecun);
+    font-family: var(--fuente-principal);
+    font-weight: 100;
+    font-size: 0.90rem;
+}
+.main_boton{
+    font-family: var(--fuente-secundaria);
+    font-size: 0.90rem;
+    font-weight: 500;
+    color: var(--tprin);
+    background-color: var(--blue);
+    padding: 10px 50px 10px 50px;
+    border: none;
+    border-radius: 0.2rem;
+}
+.main_boton:hover{
+    box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--secun) 20%, transparent); /* sombreado con otro color*/
+    transition: opacity 0.3s ease;
+}
+.main_subpar{
+    display: flex;
+    align-items: center;
+    color: var(--tsecun);
+    font-size: 0.85rem;
+}
+/*responsive**************************************************************/
+
+@media (max-width: 1200px) {
+    .header{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .main{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .header{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        gap: 1rem;
+    }
+    .main{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .main_titulo{
+        font-size: clamp(4.5rem, 14vw, 6.5rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .header_logo img{
+        width: 4rem;
+    }
+    .header_menu{
+        align-items: center;
+    }
+    .header_menu-link{
+        margin-right: 0.25rem;
+    }
+    .header_link{
+        padding: 0.65rem;
+        font-size: 0.8rem;
+    }
+    .header_boton{
+        padding: 0.25rem 1rem;
+        font-size: 1.1rem;
+    }
+    .main{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .main_sub{
+        padding-top: 3.5rem;
+        font-size: 0.9rem;
+    }
+    .main_titulo{
+        font-size: clamp(3.5rem, 20vw, 5.5rem);
+    }
+    .main_par{
+        max-width: 32rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .main_subpar{
+        font-size: 0.85rem;
+
+    }
 }
