@@ -1,0 +1,82 @@
+/*globales**************************************************************/
+:root{
+    /*paleta de colores****************************/
+    --fondo: #0B0C0E;
+    --secun: #1E1F22;
+    --borde: #2E3034;
+    --blanco: #FFFFFF;
+    --blue: #1D6EFC;
+    --tprin: #F8F8FA;
+    --tsecun: #9B9FA3;
+    /*fuentes***************************************/
+    --fuente-principal: 'Manrope', sans-serif;
+    --fuente-secundaria: 'Barlow Condensed', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--ballo), Arial, sans-serif;
+  background-color: var(--fondo);
+}
+html {
+        scroll-behavior: smooth;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header_container{
+    background-color: var(--fondo);
+    padding: 0.5rem 0 0.5rem 0;
+    border: 1px solid var(--borde);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+.header_logo{
+    display: inline-block;
+}
+.header_logo img{
+    display: block;
+    width: 5rem;
+    height: auto;
+}
+.header_menu{
+    display: flex;
+}
+.header_menu-link{
+    display: flex;
+    margin-right: 2rem;
+}
+.header_link{
+    color: var(--tsecun);
+    font-family: var(--fuente-principal);
+     font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 1rem;
+    cursor: pointer;
+}
+.header_link:hover{
+    color: var(--blanco);
+    transition: color 0.3s ease;
+}
+.header_boton{
+    background-color: var(--blue);
+    color: var(--blanco);
+    font-family: var(--fuente-secundaria);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1px 25px 1px 25px;
+    transition: box-shadow 0.3s ease;
+}
+.header_boton:hover{
+    box-shadow: inset 0 0 0 999px color-mix(in srgb, var(--secun) 20%, transparent);
+    transition: opacity 0.3s ease;
+}
